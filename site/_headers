@@ -4,8 +4,3 @@
   Permissions-Policy: camera=(), microphone=(), geolocation=()
   X-Frame-Options: DENY
   Content-Security-Policy: default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; connect-src 'self' https://raw.githubusercontent.com; object-src 'none'; base-uri 'none'; frame-ancestors 'none'
-
-/releases/*.json
-  Cache-Control: public, max-age=60, must-revalidate
-  Access-Control-Allow-Origin: *
-  Content-Type: application/json; charset=utf-8

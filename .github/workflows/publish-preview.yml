@@ -83,6 +83,6 @@ jobs:
           set -euo pipefail
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
-          git add site/releases/preview.json site/releases/preview-versions.json
+          git add releases/preview.json releases/preview-versions.json
           git commit -m "release: preview ${TAG}"
           git push origin HEAD:main

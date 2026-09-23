@@ -6,7 +6,7 @@ from datetime import datetime
 from pathlib import Path
 from urllib.parse import urlparse
 
-ROOT = Path(__file__).resolve().parents[1] / 'site' / 'releases'
+ROOT = Path(__file__).resolve().parents[1] / 'releases'
 APP_ID = 'app.polka'
 REPO = '/EraserHead8/pluribooks-distribution/releases/'
 

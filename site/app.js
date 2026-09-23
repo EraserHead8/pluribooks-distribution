@@ -1,5 +1,5 @@
 const APP_ID = 'app.polka';
-const FEEDS = 'https://raw.githubusercontent.com/EraserHead8/pluribooks-distribution/main/site/releases';
+const FEEDS = 'https://raw.githubusercontent.com/EraserHead8/pluribooks-distribution/main/releases';
 const SHA256 = /^(?!0{64}$)[0-9a-f]{64}$/;
 
 function formatSize(bytes) {

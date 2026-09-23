@@ -23,7 +23,7 @@ python3 -m http.server 8080 --directory site
      --aapt /absolute/path/to/aapt --apksigner /absolute/path/to/apksigner
    ```
 
-3. Создать **prerelease** в GitHub с тегом вида `v0.2.73`, прикрепить ровно один APK и опубликовать. Процесс `.github/workflows/publish-preview.yml` проверит загруженный APK и только после этого запишет версию, размер, SHA-256 и ссылку в `site/releases/preview.json`, а историю — в `preview-versions.json`.
+3. Создать **prerelease** в GitHub с тегом вида `v0.2.73`, прикрепить ровно один APK и опубликовать. Процесс `.github/workflows/publish-preview.yml` проверит загруженный APK и только после этого запишет версию, размер, SHA-256 и ссылку в `releases/preview.json`, а историю — в `preview-versions.json`.
 4. Дождаться успешной проверки GitHub Actions и публикации сайта; проверить ссылку и SHA-256 на живой странице. Пока приложение не получило встроенный модуль обновления, APK скачивается с сайта вручную.
 
 Ни черновик, ни непротестированный APK, ни release без APK, ни сборка с другой подписью не попадут в ленту обновлений. Стабильный канал не продвигается автоматически.
