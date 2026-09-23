@@ -3,22 +3,22 @@
   "channel": "preview",
   "applicationId": "app.polka",
   "release": {
-    "versionCode": 83,
-    "versionName": "0.2.78",
-    "publishedAt": "2026-09-23T19:32:24Z",
+    "versionCode": 84,
+    "versionName": "0.2.79",
+    "publishedAt": "2026-09-23T19:49:24Z",
     "notes": [
-      "Тестовая версия PluriBooks 0.2.78.",
-      "В «Материалах» появились страницы авторов в русской и английской Викитеке, если точное совпадение книги и автора связано с подтверждённым идентификатором Wikidata.",
-      "Ссылки сохраняются только по вашему выбору; это справочные страницы, не загрузка книг и не подтверждение прав.",
-      "Если Викитека недоступна, результат Open Library остаётся виден.",
-      "Обновление поверх 0.2.77 сохраняет библиотеку и прогресс."
+      "Тестовая версия PluriBooks 0.2.79.",
+      "В настройках появились четыре варианта оформления интерфейса: как в системе, светлый, тёмный и тёплый.",
+      "Выбор сохраняется между запусками; значки системных панелей подстраиваются под светлый или тёмный фон.",
+      "Цвета страницы чтения настраиваются отдельно и этим переключателем не меняются.",
+      "Обновление поверх 0.2.78 сохраняет библиотеку и прогресс."
     ],
-    "releaseUrl": "https://github.com/EraserHead8/pluribooks-distribution/releases/tag/v0.2.78",
+    "releaseUrl": "https://github.com/EraserHead8/pluribooks-distribution/releases/tag/v0.2.79",
     "minSdk": 26,
     "apk": {
-      "url": "https://github.com/EraserHead8/pluribooks-distribution/releases/download/v0.2.78/PluriBooks-0.2.78-debug.apk",
-      "sha256": "e92436a5fd6bae4f9fb7b8418ce274ae956bc7431d3a436ddb5874082f641e15",
-      "sizeBytes": 24599141
+      "url": "https://github.com/EraserHead8/pluribooks-distribution/releases/download/v0.2.79/PluriBooks-0.2.79-debug.apk",
+      "sha256": "2d473e8a88955208c56f9a5b14f1aa77fb660a76720ab450aa6c675a8fe5716e",
+      "sizeBytes": 24601893
     }
   }
 }
