@@ -1,0 +1,40 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "PluriBooks update feed v1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schemaVersion", "channel", "applicationId", "release"],
+  "properties": {
+    "schemaVersion": { "const": 1 },
+    "channel": { "enum": ["preview", "stable"] },
+    "applicationId": { "const": "app.polka" },
+    "release": {
+      "oneOf": [
+        { "type": "null" },
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["versionCode", "versionName", "publishedAt", "minSdk", "apk", "notes", "releaseUrl"],
+          "properties": {
+            "versionCode": { "type": "integer", "minimum": 1 },
+            "versionName": { "type": "string", "pattern": "^[0-9]+\\.[0-9]+\\.[0-9]+(?:-[0-9A-Za-z.-]+)?$" },
+            "publishedAt": { "type": "string", "format": "date-time" },
+            "minSdk": { "type": "integer", "minimum": 23, "maximum": 35 },
+            "apk": {
+              "type": "object",
+              "additionalProperties": false,
+              "required": ["url", "sha256", "sizeBytes"],
+              "properties": {
+                "url": { "type": "string", "format": "uri", "pattern": "^https://github\\.com/EraserHead8/pluribooks-distribution/releases/download/[^/]+/[^/]+\\.apk$" },
+                "sha256": { "type": "string", "pattern": "^[0-9a-f]{64}$" },
+                "sizeBytes": { "type": "integer", "minimum": 1024 }
+              }
+            },
+            "notes": { "type": "array", "maxItems": 8, "items": { "type": "string", "minLength": 1, "maxLength": 500 } },
+            "releaseUrl": { "type": "string", "format": "uri", "pattern": "^https://github\\.com/EraserHead8/pluribooks-distribution/releases/tag/[^/]+$" }
+          }
+        }
+      ]
+    }
+  }
+}

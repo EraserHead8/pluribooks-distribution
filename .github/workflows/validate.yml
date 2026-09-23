@@ -1,0 +1,31 @@
+name: Validate distribution
+on:
+  pull_request:
+  push:
+    branches: [main]
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+      - name: Validate feeds and tests
+        run: |
+          python3 tools/validate_manifests.py
+          python3 -m unittest discover -s tools -p 'test_*.py' -q
+          node --check site/app.js
+      - name: Validate JSON schemas
+        run: |
+          python3 -m pip install 'jsonschema[format]==4.25.1'
+          python3 tools/validate_schemas.py
+      - name: Keep APK and secrets out of static site
+        run: |
+          if find site -type f \( -iname '*.apk' -o -iname '*.jks' -o -iname '*.keystore' \) | grep -q .; then
+            echo 'APK/signing files do not belong in site assets.'
+            exit 1
+          fi

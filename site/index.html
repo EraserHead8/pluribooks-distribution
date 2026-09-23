@@ -1,0 +1,157 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="theme-color" content="#07111F" />
+  <meta name="description" content="PluriBooks — книги и аудиокниги в одной локальной библиотеке для Android. Тестовые выпуски и будущие стабильные версии." />
+  <meta property="og:title" content="PluriBooks — читай и слушай в одной библиотеке" />
+  <meta property="og:description" content="EPUB, FB2, PDF и аудиокниги. Один дом для историй." />
+  <title>PluriBooks — читать и слушать в одной библиотеке</title>
+  <link rel="icon" href="/assets/logo-mark.svg" type="image/svg+xml" />
+  <link rel="stylesheet" href="/styles.css" />
+  <script src="/app.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">К содержанию</a>
+  <div class="page-glow page-glow-a" aria-hidden="true"></div>
+  <div class="page-glow page-glow-b" aria-hidden="true"></div>
+
+  <header class="site-header shell">
+    <a class="brand" href="#top" aria-label="PluriBooks — на главную">
+      <img src="/assets/logo-mark.svg" width="34" height="34" alt="" />
+      <span>PluriBooks</span>
+    </a>
+    <nav aria-label="Основная навигация">
+      <a href="#features">Возможности</a>
+      <a href="#preview-release">Тестовая версия</a>
+      <a href="#updates">Обновления</a>
+      <a href="#faq">FAQ</a>
+    </nav>
+    <a class="mini-cta" href="#preview-release">Тестовая версия</a>
+  </header>
+
+  <main id="main">
+    <section class="hero shell" id="top">
+      <div class="hero-copy">
+        <div class="eyebrow"><span class="dot"></span> Android · тестовый канал</div>
+        <h1>Книги, которые можно <em>читать</em>.<br />Истории, которые можно <em>слушать</em>.</h1>
+        <p class="hero-lead">Личная библиотека для электронных и аудиокниг. Читайте, слушайте и возвращайтесь туда, где остановились — даже без сети.</p>
+        <div class="hero-actions">
+          <a class="button button-primary" href="#preview-release">Тестовая версия</a>
+          <a class="button button-secondary" href="#features">Возможности</a>
+        </div>
+        <div class="hero-meta" aria-label="Ключевые возможности">
+          <span>EPUB</span><span>FB2</span><span>PDF</span><span>Audio</span><span>Offline-first</span>
+        </div>
+      </div>
+
+      <div class="hero-visual" role="img" aria-label="Иллюстрация: книга, аудиоволна и ночные орбиты">
+        <img class="orbit-art" src="/assets/hero-orbits.svg" alt="" />
+        <div class="device-card">
+          <div class="device-top"><span></span><strong>PluriBooks</strong><span>⋯</span></div>
+          <div class="book-art" aria-hidden="true">
+            <div class="moon"></div>
+            <div class="page page-left"></div>
+            <div class="page page-right"></div>
+            <div class="wave"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+          </div>
+          <div class="mock-title">Моя библиотека</div>
+          <div class="mock-sub">Иллюстрация, не снимок приложения</div>
+          <div class="mock-progress"><span></span></div>
+          <div class="mock-row"><span>Продолжить</span><span>42%</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section shell" id="features">
+      <div class="section-heading">
+        <div class="eyebrow">Одна библиотека</div>
+        <h2>Не выбирать между «читать» и «слушать».</h2>
+        <p>Произведение остаётся одним произведением, а внутри него живут текстовые издания, переводы и аудиоверсии.</p>
+      </div>
+      <div class="feature-grid">
+        <article class="feature-card"><span class="icon">Aa</span><h3>EPUB, FB2, PDF</h3><p>Три основных формата в одной полке. FB2 — не запасной пассажир, а полноценный формат.</p></article>
+        <article class="feature-card"><span class="icon">◖)))</span><h3>Аудиокниги</h3><p>Прослушивание и библиотека аудио рядом с текстом, без отдельного приложения.</p></article>
+        <article class="feature-card"><span class="icon">∞</span><h3>Одна карточка произведения</h3><p>Издания, переводы, чтецы и форматы объединяются вокруг книги, а не вокруг файла.</p></article>
+        <article class="feature-card"><span class="icon">⌁</span><h3>Offline-first</h3><p>Личная библиотека работает локально и не требует обязательного аккаунта или постоянного сервера.</p></article>
+        <article class="feature-card"><span class="icon">⌕</span><h3>Несколько источников</h3><p>Поиск не завязан на один сайт: результаты нормализуются и объединяются.</p></article>
+        <article class="feature-card"><span class="icon">↺</span><h3>Продолжение</h3><p>Вернуться туда, где остановился — в тексте или аудио — без лишних ритуалов.</p></article>
+      </div>
+    </section>
+
+    <section class="section shell release-section" id="preview-release">
+      <div class="release-panel">
+        <div class="release-copy">
+          <div class="eyebrow"><span class="status-dot"></span> Для тестирования</div>
+          <h2 id="preview-heading">Тестовый выпуск готовится</h2>
+          <p id="preview-status" class="muted" role="status">Публичного APK пока нет. Он появится здесь после проверки и публикации.</p>
+          <ul id="preview-notes" class="release-notes" hidden></ul>
+          <div class="release-actions">
+            <a id="preview-download" class="button button-primary" href="#preview-release" hidden>Скачать тестовый APK</a>
+            <span id="preview-size" class="muted"></span>
+          </div>
+          <p class="release-warning">Тестовые версии могут содержать ошибки. Не удаляйте прежний APK, пока не убедитесь, что новая версия работает.</p>
+        </div>
+        <div class="integrity-card">
+          <span class="integrity-label">Проверка файла</span>
+          <strong>SHA-256</strong>
+          <code id="preview-sha">Появится вместе с APK</code>
+          <p>Будущее обновление в приложении скачает APK после нажатия пользователем, проверит его хеш и передаст Android для установки. Системное подтверждение останется обязательным.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section shell stable-section" id="stable-release">
+      <div class="section-heading compact">
+        <div class="eyebrow">Стабильный канал</div>
+        <h2 id="stable-heading">Стабильная версия ещё не объявлена.</h2>
+        <p id="stable-status">Стабильный релиз появится здесь только после отдельной проверки и решения владельца. Тестовая сборка не станет стабильной автоматически.</p>
+        <a id="stable-download" class="button button-secondary" href="#stable-release" hidden>Скачать стабильный APK</a>
+      </div>
+    </section>
+
+    <section class="section shell" id="updates">
+      <div class="section-heading compact">
+        <div class="eyebrow">Обновления под вашим контролем</div>
+        <h2>Новая версия — выбор за вами.</h2>
+        <p>Сейчас разрабатывается тестовый канал. Позже стабильный канал будет отделён от него: случайная тестовая сборка не попадёт в stable.</p>
+      </div>
+      <ol class="steps">
+        <li><span>01</span><h3>Проверка</h3><p>Приложение узнаёт о новой тестовой версии, когда есть сеть.</p></li>
+        <li><span>02</span><h3>Напоминание</h3><p>Предложение можно закрыть на неделю. В настройках проверка доступна вручную.</p></li>
+        <li><span>03</span><h3>Установка</h3><p>После вашего согласия APK скачивается, проверяется и открывается штатный установщик.</p></li>
+      </ol>
+      <p class="system-note">Пока обновление внутри приложения не выпущено, новые APK нужно скачивать с этой страницы вручную. Android может попросить разрешение на установку из выбранного источника.</p>
+    </section>
+
+    <section class="section shell" id="history">
+      <div class="section-heading compact">
+        <div class="eyebrow">История выпусков</div>
+        <h2>Последние версии.</h2>
+      </div>
+      <h3>Тестовые</h3>
+      <div id="preview-version-list" class="version-list" aria-live="polite">Пока нет опубликованных версий.</div>
+      <h3 class="history-subheading">Стабильные</h3>
+      <div id="stable-version-list" class="version-list" aria-live="polite">Пока нет опубликованных версий.</div>
+    </section>
+
+    <section class="section shell" id="faq">
+      <div class="section-heading compact"><div class="eyebrow">FAQ</div><h2>Коротко о важном.</h2></div>
+      <div class="faq-list">
+        <details><summary>Это обновление через Google Play?</summary><p>Нет. APK будут размещаться в GitHub Releases; установку или обновление подтвердит штатный установщик Android.</p></details>
+        <details><summary>Почему Android спрашивает разрешение на установку?</summary><p>Для приложений, установленных не из официального магазина, Android требует отдельное разрешение для источника установки. Это нормальная системная защита.</p></details>
+        <details><summary>Потеряются ли книги после обновления?</summary><p>При обновлении того же приложения с той же подписью данные обычно сохраняются. Перед выпуском мы проверим это на телефоне; при переходе с тестовой подписи на будущую постоянную может понадобиться отдельная миграция.</p></details>
+        <details><summary>Какие форматы поддерживаются?</summary><p>Базовый набор: EPUB, FB2/FB2.ZIP и PDF, плюс аудиокниги.</p></details>
+        <details><summary>Где посмотреть номер версии?</summary><p>Номер установленной версии Android показывает в сведениях о приложении. Проверка обновлений в настройках PluriBooks появится вместе с обновляющим модулем.</p></details>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer shell">
+    <div class="brand"><img src="/assets/logo-mark.svg" width="30" height="30" alt="" /><span>PluriBooks</span></div>
+    <p>Один дом для текста и звука.</p>
+    <p class="muted">Сайт не требует аккаунта. APK не хранится на сайте.</p>
+  </footer>
+</body>
+</html>

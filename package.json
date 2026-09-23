@@ -1,0 +1,13 @@
+{
+  "name": "pluribooks-distribution",
+  "private": true,
+  "version": "0.1.0",
+  "scripts": {
+    "dev": "python3 -m http.server 8080 --directory site",
+    "validate": "python3 tools/validate_manifests.py",
+    "deploy": "wrangler deploy"
+  },
+  "devDependencies": {
+    "wrangler": "^4.34.0"
+  }
+}

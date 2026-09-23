@@ -1,0 +1,88 @@
+name: Publish preview update feed
+on:
+  release:
+    types: [published]
+permissions:
+  contents: write
+jobs:
+  preview:
+    if: github.event.release.prerelease == true && github.event.release.draft == false
+    runs-on: ubuntu-latest
+    env:
+      GH_TOKEN: ${{ github.token }}
+      TAG: ${{ github.event.release.tag_name }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - uses: android-actions/setup-android@v3
+      - name: Install Android verification tools
+        run: sdkmanager 'build-tools;35.0.0'
+      - name: Verify release and download its one APK
+        run: |
+          set -euo pipefail
+          mkdir -p "$RUNNER_TEMP/apk"
+          gh release view "$TAG" --json tagName,isPrerelease,isDraft,url,body > "$RUNNER_TEMP/release.json"
+          gh release download "$TAG" --pattern '*.apk' --dir "$RUNNER_TEMP/apk"
+          python3 - <<'PY'
+          import json, os, re
+          from pathlib import Path
+          release = json.loads((Path(os.environ['RUNNER_TEMP']) / 'release.json').read_text())
+          tag = os.environ['TAG']
+          if not re.fullmatch(r'v[0-9]+\.[0-9]+\.[0-9]+(?:-[0-9A-Za-z.-]+)?', tag):
+              raise SystemExit('Invalid release tag')
+          if release['tagName'] != tag or not release['isPrerelease'] or release['isDraft']:
+              raise SystemExit('Only published prereleases can update the preview feed')
+          assets = list((Path(os.environ['RUNNER_TEMP']) / 'apk').glob('*.apk'))
+          if len(assets) != 1 or not re.fullmatch(r'[A-Za-z0-9._-]+\.apk', assets[0].name):
+              raise SystemExit('Expected exactly one simply named APK')
+          notes = (release.get('body') or 'Тестовое обновление').strip()
+          (Path(os.environ['RUNNER_TEMP']) / 'notes.txt').write_text(notes, encoding='utf-8')
+          output = Path(os.environ['GITHUB_OUTPUT'])
+          with output.open('a') as file:
+              file.write(f'apk={assets[0]}\n')
+              file.write(f'release_url={release["url"]}\n')
+          PY
+        id: release
+      - name: Inspect actual APK package, version and signer
+        env:
+          APK: ${{ steps.release.outputs.apk }}
+        run: |
+          python3 tools/verify_apk.py --apk "$APK" --version-name "${TAG#v}" \
+            --aapt "$ANDROID_HOME/build-tools/35.0.0/aapt" \
+            --apksigner "$ANDROID_HOME/build-tools/35.0.0/apksigner"
+      - name: Update preview feed
+        env:
+          APK: ${{ steps.release.outputs.apk }}
+          RELEASE_URL: ${{ steps.release.outputs.release_url }}
+        run: |
+          python3 - <<'PY'
+          import os, subprocess
+          from pathlib import Path
+          from urllib.parse import quote
+          from tools.verify_apk import inspect
+          apk = os.environ['APK']
+          tag = os.environ['TAG']
+          name = tag[1:]
+          code, min_sdk = inspect(apk, name,
+              os.environ['ANDROID_HOME'] + '/build-tools/35.0.0/aapt',
+              os.environ['ANDROID_HOME'] + '/build-tools/35.0.0/apksigner')
+          url = 'https://github.com/' + os.environ['GITHUB_REPOSITORY'] + '/releases/download/' + quote(tag) + '/' + quote(Path(apk).name)
+          subprocess.run(['python3', 'tools/promote_release.py', '--channel', 'preview',
+              '--apk', apk, '--version-name', name, '--version-code', str(code),
+              '--min-sdk', str(min_sdk), '--apk-url', url,
+              '--release-url', os.environ['RELEASE_URL'],
+              '--notes-file', os.environ['RUNNER_TEMP'] + '/notes.txt'], check=True)
+          PY
+          python3 tools/validate_manifests.py
+      - name: Commit checked metadata
+        run: |
+          set -euo pipefail
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add site/releases/preview.json site/releases/preview-versions.json
+          git commit -m "release: preview ${TAG}"
+          git push origin HEAD:main

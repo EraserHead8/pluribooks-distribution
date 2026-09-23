@@ -1,0 +1,7 @@
+node_modules/
+.wrangler/
+.env*
+*.apk
+*.jks
+*.keystore
+__pycache__/
