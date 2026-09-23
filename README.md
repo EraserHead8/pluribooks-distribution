@@ -30,7 +30,7 @@ python3 -m http.server 8080 --directory site
 
 ## Размещение сайта
 
-`wrangler.jsonc` описывает Cloudflare Workers Static Assets. Репозиторий подключается к Cloudflare Workers Builds; ветка `main`, команда сборки отсутствует, команда развертывания — `npx wrangler deploy`. Для ручного развёртывания после настройки аккаунта: `npm install && npx wrangler deploy`.
+`wrangler.jsonc` описывает Cloudflare Workers Static Assets. Сайт вручную опубликован на `https://pluribooks.program46.workers.dev/`. Cloudflare Git-интеграция не подключилась; текущая публикация — загрузка папки `site/` через панель Cloudflare. Страница читает JSON-ленты из GitHub `main`, поэтому новые версии отображаются без повторной загрузки сайта. Для будущего обновления дизайна нужно повторно загрузить папку `site/` или отдельно настроить CI с минимальными правами.
 
 Cloudflare хранит малые страницы и JSON, GitHub — крупные APK. Не размещать APK в `site/`. Для первого публичного URL можно использовать бесплатный `*.workers.dev`; собственный домен подключается отдельно.
 

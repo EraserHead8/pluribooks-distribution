@@ -1,4 +1,5 @@
 const APP_ID = 'app.polka';
+const FEEDS = 'https://raw.githubusercontent.com/EraserHead8/pluribooks-distribution/main/site/releases';
 const SHA256 = /^(?!0{64}$)[0-9a-f]{64}$/;
 
 function formatSize(bytes) {
@@ -42,7 +43,7 @@ function renderNotes(selector, notes) {
 
 async function loadChannel(channel) {
   try {
-    const feed = await getJson(`/releases/${channel}.json`);
+    const feed = await getJson(`${FEEDS}/${channel}.json`);
     if (feed.schemaVersion !== 1 || feed.channel !== channel || feed.applicationId !== APP_ID ||
         (feed.release !== null && !isRelease(feed.release))) throw new Error('Invalid release feed');
     if (feed.release === null) return;
@@ -67,7 +68,7 @@ async function loadChannel(channel) {
 async function loadHistory(channel, selector) {
   const root = document.querySelector(selector);
   try {
-    const history = await getJson(`/releases/${channel === 'stable' ? 'versions' : 'preview-versions'}.json`);
+    const history = await getJson(`${FEEDS}/${channel === 'stable' ? 'versions' : 'preview-versions'}.json`);
     if (history.schemaVersion !== 1 || history.channel !== channel || !Array.isArray(history.versions))
       throw new Error('Invalid history');
     if (history.versions.length === 0) return;
