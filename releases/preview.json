@@ -3,22 +3,22 @@
   "channel": "preview",
   "applicationId": "app.polka",
   "release": {
-    "versionCode": 81,
-    "versionName": "0.2.76",
-    "publishedAt": "2026-09-23T19:00:38Z",
+    "versionCode": 82,
+    "versionName": "0.2.77",
+    "publishedAt": "2026-09-23T19:13:41Z",
     "notes": [
-      "Тестовая версия PluriBooks 0.2.76.",
-      "- Исправлено обнаружение справочной страницы автора, когда Open Library возвращает несколько точных карточек одной книги с одним автором (например, «Анна Каренина»).",
-      "- Если конкретная карточка неоднозначна, приложение не показывает её как подтверждённую ссылку.",
-      "- Это справочные материалы, не загрузка книги и не подтверждение прав.",
-      "- Сохранены идентификатор приложения, подпись и данные библиотеки при обновлении поверх 0.2.75."
+      "Тестовая версия PluriBooks 0.2.77.",
+      "Для уже сохранённой страницы автора теперь можно явно добавить точную карточку книги, если каталог подтвердил её позже.",
+      "Ссылка обновляется в той же записи без дубля; прежняя подтверждённая карточка не заменяется неоднозначным результатом.",
+      "Open Library остаётся справочным источником: это не загрузка книги и не подтверждение прав.",
+      "Обновление поверх 0.2.76 сохраняет библиотеку и прогресс."
     ],
-    "releaseUrl": "https://github.com/EraserHead8/pluribooks-distribution/releases/tag/v0.2.76",
+    "releaseUrl": "https://github.com/EraserHead8/pluribooks-distribution/releases/tag/v0.2.77",
     "minSdk": 26,
     "apk": {
-      "url": "https://github.com/EraserHead8/pluribooks-distribution/releases/download/v0.2.76/PluriBooks-0.2.76-debug.apk",
-      "sha256": "d89aba2bc66d7f09a67c70caaa041b0136c4222911d8e1a21249e992b82ccaa5",
-      "sizeBytes": 24579897
+      "url": "https://github.com/EraserHead8/pluribooks-distribution/releases/download/v0.2.77/PluriBooks-0.2.77-debug.apk",
+      "sha256": "0f682f61a5dc70a533da95404a4d7cfe4673aa52514b2beb77a7749e51c6774c",
+      "sizeBytes": 24581017
     }
   }
 }
