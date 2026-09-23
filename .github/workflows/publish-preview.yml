@@ -2,15 +2,21 @@ name: Publish preview update feed
 on:
   release:
     types: [published]
+  workflow_dispatch:
+    inputs:
+      tag:
+        description: Published preview release tag to verify again
+        required: true
+        type: string
 permissions:
   contents: write
 jobs:
   preview:
-    if: github.event.release.prerelease == true && github.event.release.draft == false
+    if: github.event_name == 'workflow_dispatch' || (github.event.release.prerelease == true && github.event.release.draft == false)
     runs-on: ubuntu-latest
     env:
       GH_TOKEN: ${{ github.token }}
-      TAG: ${{ github.event.release.tag_name }}
+      TAG: ${{ inputs.tag || github.event.release.tag_name }}
     steps:
       - uses: actions/checkout@v4
         with:
@@ -18,9 +24,13 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: '3.12'
-      - uses: android-actions/setup-android@v3
       - name: Install Android verification tools
-        run: sdkmanager 'build-tools;35.0.0'
+        run: |
+          if [ ! -x "$ANDROID_HOME/build-tools/35.0.0/aapt" ]; then
+            sdkmanager 'build-tools;35.0.0'
+          fi
+          test -x "$ANDROID_HOME/build-tools/35.0.0/aapt"
+          test -x "$ANDROID_HOME/build-tools/35.0.0/apksigner"
       - name: Verify release and download its one APK
         run: |
           set -euo pipefail
