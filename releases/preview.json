@@ -3,21 +3,21 @@
   "channel": "preview",
   "applicationId": "app.polka",
   "release": {
-    "versionCode": 79,
-    "versionName": "0.2.74",
-    "publishedAt": "2026-09-23T18:14:07Z",
+    "versionCode": 80,
+    "versionName": "0.2.75",
+    "publishedAt": "2026-09-23T18:36:30Z",
     "notes": [
-      "Тестовая версия PluriBooks 0.2.74.",
-      "Ненавязчивое предложение новой версии при открытии приложения; после закрытия напоминание не появляется неделю.",
-      "Проверка и ссылка на загрузку всегда доступны в настройках.",
-      "Сохранены прежний идентификатор приложения и подпись для обновления без потери библиотеки."
+      "Тестовая версия PluriBooks 0.2.75.",
+      "В разделе «Материалы» теперь видно, добавлена ссылка вручную или найдена в Open Library.",
+      "Для найденной страницы автора можно открыть страницу книги, по которой подтверждено совпадение. Это справочная ссылка, не загрузка книги.",
+      "Сохранены прежние данные приложения и подпись для обновления поверх 0.2.74."
     ],
-    "releaseUrl": "https://github.com/EraserHead8/pluribooks-distribution/releases/tag/v0.2.74",
+    "releaseUrl": "https://github.com/EraserHead8/pluribooks-distribution/releases/tag/v0.2.75",
     "minSdk": 26,
     "apk": {
-      "url": "https://github.com/EraserHead8/pluribooks-distribution/releases/download/v0.2.74/PluriBooks-0.2.74-debug.apk",
-      "sha256": "654be0546a2adac0794e77d5da0f4e930a4b1e44a171a20a0b9a302e542c2b27",
-      "sizeBytes": 26577456
+      "url": "https://github.com/EraserHead8/pluribooks-distribution/releases/download/v0.2.75/PluriBooks-0.2.75-debug.apk",
+      "sha256": "9c5a681f906b0beefef7c76e6e247da25b70ed16184f5a5422fac46d06685876",
+      "sizeBytes": 24579897
     }
   }
 }
