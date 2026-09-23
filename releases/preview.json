@@ -2,5 +2,22 @@
   "schemaVersion": 1,
   "channel": "preview",
   "applicationId": "app.polka",
-  "release": null
+  "release": {
+    "versionCode": 79,
+    "versionName": "0.2.74",
+    "publishedAt": "2026-09-23T18:14:07Z",
+    "notes": [
+      "Тестовая версия PluriBooks 0.2.74.",
+      "Ненавязчивое предложение новой версии при открытии приложения; после закрытия напоминание не появляется неделю.",
+      "Проверка и ссылка на загрузку всегда доступны в настройках.",
+      "Сохранены прежний идентификатор приложения и подпись для обновления без потери библиотеки."
+    ],
+    "releaseUrl": "https://github.com/EraserHead8/pluribooks-distribution/releases/tag/v0.2.74",
+    "minSdk": 26,
+    "apk": {
+      "url": "https://github.com/EraserHead8/pluribooks-distribution/releases/download/v0.2.74/PluriBooks-0.2.74-debug.apk",
+      "sha256": "654be0546a2adac0794e77d5da0f4e930a4b1e44a171a20a0b9a302e542c2b27",
+      "sizeBytes": 26577456
+    }
+  }
 }
