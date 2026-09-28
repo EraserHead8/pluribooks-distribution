@@ -3,21 +3,20 @@
   "channel": "preview",
   "applicationId": "app.polka",
   "release": {
-    "versionCode": 90,
-    "versionName": "0.2.85",
-    "publishedAt": "2026-09-28T20:49:09Z",
+    "versionCode": 91,
+    "versionName": "0.2.86",
+    "publishedAt": "2026-09-28T22:12:32Z",
     "notes": [
       "Тестовая версия для Android.",
-      "• Создавайте, переименовывайте и удаляйте личные коллекции книг. Одна книга может входить в несколько коллекций.",
-      "• Фильтруйте библиотеку по коллекции и добавляйте книги из меню карточки в списке или сетке.",
-      "• Повторное сканирование сохраняет состав коллекций; удаление коллекции не удаляет книги.",
-      "Проверены миграция базы, импорт, интерфейс, полный набор тестов, lint и чистая сборка. Обновление поверх предыдущей версии сохраняет библиотеку."
+      "• На планшете и в альбомной ориентации главная и библиотека больше не растягивают карточки на всю ширину.",
+      "• Экранное озвучивание не повторяет декоративные буквы запасных обложек; название книги остаётся доступным.",
+      "Коллекции из 0.2.85 сохранены. Полные тесты, lint и чистая сборка прошли. Создание коллекции на телефоне ещё требует проверки."
     ],
-    "releaseUrl": "https://github.com/EraserHead8/pluribooks-distribution/releases/tag/v0.2.85",
+    "releaseUrl": "https://github.com/EraserHead8/pluribooks-distribution/releases/tag/v0.2.86",
     "minSdk": 26,
     "apk": {
-      "url": "https://github.com/EraserHead8/pluribooks-distribution/releases/download/v0.2.85/PluriBooks-0.2.85-debug.apk",
-      "sha256": "1b670c8e0b9161956590ff53a2e1bc7d6659b8cebf0ea354db93bd1fbbe9e281",
+      "url": "https://github.com/EraserHead8/pluribooks-distribution/releases/download/v0.2.86/PluriBooks-0.2.86-debug.apk",
+      "sha256": "6641e1f8881297e90bdf528e8ea35a6a471f7cf2ae9670117ac9718633fceb98",
       "sizeBytes": 24742093
     }
   }
