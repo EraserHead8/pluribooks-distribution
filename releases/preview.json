@@ -3,21 +3,24 @@
   "channel": "preview",
   "applicationId": "app.polka",
   "release": {
-    "versionCode": 85,
-    "versionName": "0.2.80",
-    "publishedAt": "2026-09-28T13:12:35Z",
+    "versionCode": 86,
+    "versionName": "0.2.81",
+    "publishedAt": "2026-09-28T14:24:45Z",
     "notes": [
-      "Тестовая версия PluriBooks 0.2.80.",
-      "- Обложки в библиотеке и «Читаю сейчас» теперь показываются целиком: края изображения и название на самой обложке не обрезаются.",
-      "- Для экранного озвучивания карточка книги явно сообщает действие «Читать» или «Слушать» и название книги; это работает в списке и сетке.",
-      "- Обновление поверх 0.2.79 сохраняет библиотеку и прогресс."
+      "Тестовая версия для Android.",
+      "Что изменилось:",
+      "- Компактная панель аудиокниги: название, глава, прогресс и пауза всегда под рукой.",
+      "- По нажатию открывается отдельный плеер с обложкой, перемоткой, временем текущей главы, скоростью, списком глав и закладками.",
+      "- Таймер сна теперь может остановить воспроизведение в конце текущей главы; временные варианты сохранены.",
+      "- Подписи проверены на узком экране и при крупном русском шрифте.",
+      "Установка поверх предыдущей тестовой версии сохраняет библиотеку. На реальном телефоне проверьте переход к следующей главе при таймере сна."
     ],
-    "releaseUrl": "https://github.com/EraserHead8/pluribooks-distribution/releases/tag/v0.2.80",
+    "releaseUrl": "https://github.com/EraserHead8/pluribooks-distribution/releases/tag/v0.2.81",
     "minSdk": 26,
     "apk": {
-      "url": "https://github.com/EraserHead8/pluribooks-distribution/releases/download/v0.2.80/PluriBooks-0.2.80-debug.apk",
-      "sha256": "255e80c60b90a6ff20a11fa6b26f4e33dd79fc8b72f996be162f23e3dffd5ca5",
-      "sizeBytes": 24602801
+      "url": "https://github.com/EraserHead8/pluribooks-distribution/releases/download/v0.2.81/PluriBooks-0.2.81-debug.apk",
+      "sha256": "5543258fa87af97a96cda7ac792bbf38bb43aea9835e9cb8ed1784fd6e3183dd",
+      "sizeBytes": 24640549
     }
   }
 }
