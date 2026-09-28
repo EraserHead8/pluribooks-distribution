@@ -3,21 +3,21 @@
   "channel": "preview",
   "applicationId": "app.polka",
   "release": {
-    "versionCode": 91,
-    "versionName": "0.2.86",
-    "publishedAt": "2026-09-28T22:12:32Z",
+    "versionCode": 92,
+    "versionName": "0.2.87",
+    "publishedAt": "2026-09-28T22:44:16Z",
     "notes": [
       "Тестовая версия для Android.",
-      "• На планшете и в альбомной ориентации главная и библиотека больше не растягивают карточки на всю ширину.",
-      "• Экранное озвучивание не повторяет декоративные буквы запасных обложек; название книги остаётся доступным.",
-      "Коллекции из 0.2.85 сохранены. Полные тесты, lint и чистая сборка прошли. Создание коллекции на телефоне ещё требует проверки."
+      "Скорость воспроизведения теперь сохраняется отдельно для каждой аудиокниги. В меню темпа можно вернуть прежнюю скорость по умолчанию.",
+      "Оставшееся время текущей главы учитывает выбранный темп; время всей книги пока не оценивается. Библиотека и прогресс сохраняются при обновлении поверх 0.2.86.",
+      "Локальные тесты, lint и чистая сборка прошли. Проверка на телефоне ещё нужна."
     ],
-    "releaseUrl": "https://github.com/EraserHead8/pluribooks-distribution/releases/tag/v0.2.86",
+    "releaseUrl": "https://github.com/EraserHead8/pluribooks-distribution/releases/tag/v0.2.87",
     "minSdk": 26,
     "apk": {
-      "url": "https://github.com/EraserHead8/pluribooks-distribution/releases/download/v0.2.86/PluriBooks-0.2.86-debug.apk",
-      "sha256": "6641e1f8881297e90bdf528e8ea35a6a471f7cf2ae9670117ac9718633fceb98",
-      "sizeBytes": 24742093
+      "url": "https://github.com/EraserHead8/pluribooks-distribution/releases/download/v0.2.87/PluriBooks-0.2.87-debug.apk",
+      "sha256": "bf1a320c5257ee0cef6bd2ad33be4c6273e6df40bbd95d6534961f434bff46a9",
+      "sizeBytes": 24758969
     }
   }
 }
