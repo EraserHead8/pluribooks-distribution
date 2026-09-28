@@ -3,21 +3,21 @@
   "channel": "preview",
   "applicationId": "app.polka",
   "release": {
-    "versionCode": 92,
-    "versionName": "0.2.87",
-    "publishedAt": "2026-09-28T22:44:16Z",
+    "versionCode": 93,
+    "versionName": "0.2.88",
+    "publishedAt": "2026-09-28T23:11:24Z",
     "notes": [
       "Тестовая версия для Android.",
-      "Скорость воспроизведения теперь сохраняется отдельно для каждой аудиокниги. В меню темпа можно вернуть прежнюю скорость по умолчанию.",
-      "Оставшееся время текущей главы учитывает выбранный темп; время всей книги пока не оценивается. Библиотека и прогресс сохраняются при обновлении поверх 0.2.86.",
+      "В настройках можно выключить автоотмотку после длительной паузы или выбрать 5, 10 либо 20 секунд. Она срабатывает после паузы от 10 минут; прежний режим 10 секунд остаётся вариантом по умолчанию.",
+      "Для отсчёта паузы используется устойчивое время устройства. Автоматический возврат не попадает в историю ручных переходов.",
       "Локальные тесты, lint и чистая сборка прошли. Проверка на телефоне ещё нужна."
     ],
-    "releaseUrl": "https://github.com/EraserHead8/pluribooks-distribution/releases/tag/v0.2.87",
+    "releaseUrl": "https://github.com/EraserHead8/pluribooks-distribution/releases/tag/v0.2.88",
     "minSdk": 26,
     "apk": {
-      "url": "https://github.com/EraserHead8/pluribooks-distribution/releases/download/v0.2.87/PluriBooks-0.2.87-debug.apk",
-      "sha256": "bf1a320c5257ee0cef6bd2ad33be4c6273e6df40bbd95d6534961f434bff46a9",
-      "sizeBytes": 24758969
+      "url": "https://github.com/EraserHead8/pluribooks-distribution/releases/download/v0.2.88/PluriBooks-0.2.88-debug.apk",
+      "sha256": "eb093d62756fde7ee5af677bf639ec583cc210a077660a47037eb9108c26ec9f",
+      "sizeBytes": 24760585
     }
   }
 }
