@@ -3,21 +3,20 @@
   "channel": "preview",
   "applicationId": "app.polka",
   "release": {
-    "versionCode": 97,
-    "versionName": "0.2.92",
-    "publishedAt": "2026-09-29T07:14:01Z",
+    "versionCode": 98,
+    "versionName": "0.2.93",
+    "publishedAt": "2026-09-29T07:37:13Z",
     "notes": [
-      "Тестовая версия PluriBooks для Android.",
-      "• Библиотека: карточки в сетке выровнены; состояние «Читаю», «Слушаю» или «Завершено» постоянно видно на обложке. Избранное, завершение/продолжение и меню доступны на каждой карточке.",
-      "• Настройки: ровные группы и строки вместо разрозненных плашек; выбор перемотки, автоотмотки, языка и оформления — в коротких окнах.",
-      "• Проверены модульные тесты, lint и чистая сборка. Проверка на реальном телефоне ещё нужна."
+      "Исправлена плитка библиотеки: отметка «Прочитано» и галочка остаются видимыми; кнопки «Избранное», завершения и меню имеют удобные зоны нажатия. Дополнительные действия перенесены в меню, чтобы карточки не разъезжались.",
+      "Тестовая сборка Android, устанавливается поверх предыдущей версии без удаления библиотеки. Проверены локальные UI-тесты, общие тесты, Android lint и чистая debug-сборка. Проверка на телефоне ещё нужна.",
+      "SHA-256 APK: 2c28fac3e667f887a42cd5a81a23dbb079da323b0a1d1e138a3646365b1710ef"
     ],
-    "releaseUrl": "https://github.com/EraserHead8/pluribooks-distribution/releases/tag/v0.2.92",
+    "releaseUrl": "https://github.com/EraserHead8/pluribooks-distribution/releases/tag/v0.2.93",
     "minSdk": 26,
     "apk": {
-      "url": "https://github.com/EraserHead8/pluribooks-distribution/releases/download/v0.2.92/PluriBooks-0.2.92-debug.apk",
-      "sha256": "b01a20da2079cea4058297da8dcf7c862216717eea8ffd17f3fe340d7679107c",
-      "sizeBytes": 24805970
+      "url": "https://github.com/EraserHead8/pluribooks-distribution/releases/download/v0.2.93/PluriBooks-0.2.93-debug.apk",
+      "sha256": "2c28fac3e667f887a42cd5a81a23dbb079da323b0a1d1e138a3646365b1710ef",
+      "sizeBytes": 24808682
     }
   }
 }
