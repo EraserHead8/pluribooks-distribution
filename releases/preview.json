@@ -3,21 +3,18 @@
   "channel": "preview",
   "applicationId": "app.polka",
   "release": {
-    "versionCode": 93,
-    "versionName": "0.2.88",
-    "publishedAt": "2026-09-28T23:11:24Z",
+    "versionCode": 94,
+    "versionName": "0.2.89",
+    "publishedAt": "2026-09-29T06:01:33Z",
     "notes": [
-      "Тестовая версия для Android.",
-      "В настройках можно выключить автоотмотку после длительной паузы или выбрать 5, 10 либо 20 секунд. Она срабатывает после паузы от 10 минут; прежний режим 10 секунд остаётся вариантом по умолчанию.",
-      "Для отсчёта паузы используется устойчивое время устройства. Автоматический возврат не попадает в историю ручных переходов.",
-      "Локальные тесты, lint и чистая сборка прошли. Проверка на телефоне ещё нужна."
+      "Тестовая версия. Настройки теперь открываются отдельным полноэкранным разделом: прослушивание, оформление и язык, папки библиотеки, загрузки и копии, обновления. На главном экране видны текущие значения. Сохранённые книги, доступ к папкам и прогресс не меняются. Локальные тесты, lint и чистая сборка прошли. Проверка на телефоне ещё нужна."
     ],
-    "releaseUrl": "https://github.com/EraserHead8/pluribooks-distribution/releases/tag/v0.2.88",
+    "releaseUrl": "https://github.com/EraserHead8/pluribooks-distribution/releases/tag/v0.2.89",
     "minSdk": 26,
     "apk": {
-      "url": "https://github.com/EraserHead8/pluribooks-distribution/releases/download/v0.2.88/PluriBooks-0.2.88-debug.apk",
-      "sha256": "eb093d62756fde7ee5af677bf639ec583cc210a077660a47037eb9108c26ec9f",
-      "sizeBytes": 24760585
+      "url": "https://github.com/EraserHead8/pluribooks-distribution/releases/download/v0.2.89/PluriBooks-0.2.89-debug.apk",
+      "sha256": "d0421f00c82796ce6c2b74402d96e8d1f43fbeccb8c99ca8ac0645ad89ca75c3",
+      "sizeBytes": 24781221
     }
   }
 }
