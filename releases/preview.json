@@ -3,21 +3,21 @@
   "channel": "preview",
   "applicationId": "app.polka",
   "release": {
-    "versionCode": 95,
-    "versionName": "0.2.90",
-    "publishedAt": "2026-09-29T06:35:49Z",
+    "versionCode": 97,
+    "versionName": "0.2.92",
+    "publishedAt": "2026-09-29T07:14:01Z",
     "notes": [
-      "Тестовая версия для Android.",
-      "- Карточки в библиотеке и «Читаю сейчас» получили мягкий оттенок фона и рамки от обложки. Если обложки нет, сохраняется прежняя цветная заглушка.",
-      "- Цвет текста и читательская страница не менялись. Проверен контраст в светлой, тёмной и тёплой темах.",
-      "- Локальные тесты, lint и чистая сборка прошли. Проверка на телефоне ещё нужна."
+      "Тестовая версия PluriBooks для Android.",
+      "• Библиотека: карточки в сетке выровнены; состояние «Читаю», «Слушаю» или «Завершено» постоянно видно на обложке. Избранное, завершение/продолжение и меню доступны на каждой карточке.",
+      "• Настройки: ровные группы и строки вместо разрозненных плашек; выбор перемотки, автоотмотки, языка и оформления — в коротких окнах.",
+      "• Проверены модульные тесты, lint и чистая сборка. Проверка на реальном телефоне ещё нужна."
     ],
-    "releaseUrl": "https://github.com/EraserHead8/pluribooks-distribution/releases/tag/v0.2.90",
+    "releaseUrl": "https://github.com/EraserHead8/pluribooks-distribution/releases/tag/v0.2.92",
     "minSdk": 26,
     "apk": {
-      "url": "https://github.com/EraserHead8/pluribooks-distribution/releases/download/v0.2.90/PluriBooks-0.2.90-debug.apk",
-      "sha256": "122054ecf20db29613edc1231d7f1d1f879fde07f363cea41f741d79c5ae0a72",
-      "sizeBytes": 24781221
+      "url": "https://github.com/EraserHead8/pluribooks-distribution/releases/download/v0.2.92/PluriBooks-0.2.92-debug.apk",
+      "sha256": "b01a20da2079cea4058297da8dcf7c862216717eea8ffd17f3fe340d7679107c",
+      "sizeBytes": 24805970
     }
   }
 }
