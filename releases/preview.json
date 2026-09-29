@@ -3,17 +3,20 @@
   "channel": "preview",
   "applicationId": "app.polka",
   "release": {
-    "versionCode": 94,
-    "versionName": "0.2.89",
-    "publishedAt": "2026-09-29T06:01:33Z",
+    "versionCode": 95,
+    "versionName": "0.2.90",
+    "publishedAt": "2026-09-29T06:35:49Z",
     "notes": [
-      "Тестовая версия. Настройки теперь открываются отдельным полноэкранным разделом: прослушивание, оформление и язык, папки библиотеки, загрузки и копии, обновления. На главном экране видны текущие значения. Сохранённые книги, доступ к папкам и прогресс не меняются. Локальные тесты, lint и чистая сборка прошли. Проверка на телефоне ещё нужна."
+      "Тестовая версия для Android.",
+      "- Карточки в библиотеке и «Читаю сейчас» получили мягкий оттенок фона и рамки от обложки. Если обложки нет, сохраняется прежняя цветная заглушка.",
+      "- Цвет текста и читательская страница не менялись. Проверен контраст в светлой, тёмной и тёплой темах.",
+      "- Локальные тесты, lint и чистая сборка прошли. Проверка на телефоне ещё нужна."
     ],
-    "releaseUrl": "https://github.com/EraserHead8/pluribooks-distribution/releases/tag/v0.2.89",
+    "releaseUrl": "https://github.com/EraserHead8/pluribooks-distribution/releases/tag/v0.2.90",
     "minSdk": 26,
     "apk": {
-      "url": "https://github.com/EraserHead8/pluribooks-distribution/releases/download/v0.2.89/PluriBooks-0.2.89-debug.apk",
-      "sha256": "d0421f00c82796ce6c2b74402d96e8d1f43fbeccb8c99ca8ac0645ad89ca75c3",
+      "url": "https://github.com/EraserHead8/pluribooks-distribution/releases/download/v0.2.90/PluriBooks-0.2.90-debug.apk",
+      "sha256": "122054ecf20db29613edc1231d7f1d1f879fde07f363cea41f741d79c5ae0a72",
       "sizeBytes": 24781221
     }
   }
